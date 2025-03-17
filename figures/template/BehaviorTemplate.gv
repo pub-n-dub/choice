@@ -1,0 +1,29 @@
+digraph behaviorTemplate {
+		graph [fontname = "helvetica"];
+		rankdir=BT;
+		nodesep=1.3
+		ranksep=1.3
+		forcelabels=true;
+		node [shape=circle, fillcolor="grey2"  fixedsize="true", fontname="arial", width="1.0"];
+		a [label="Initial"]
+		b [label="Choice x"]
+		c [label="Choice y"]
+		d [label="Final"]
+
+		edge [color=black, splines=curved, fontsize="18", fontname="calibri"]
+
+		a -> b [label= < x<SUB>1</SUB>>,weight="0.2",penwidth=1.0];
+		b -> a [label= < x<SUB>2</SUB>>,weight="0.2",penwidth=1.0,style=dashed];
+
+		a -> c [label=<  y<SUB>1</SUB>>,weight="0.2",penwidth=1.0];
+		c -> a [label=< y<SUB>2</SUB>>,weight="0.2",penwidth=1.0,style=dashed];
+		b -> d [label=< z<SUB>0</SUB>>,weight="0.6",penwidth=1.0];
+		c -> d [label=< z<SUB>0</SUB>>,weight="0.1",penwidth=1.0];
+
+		//page="8.5,11"
+		size="4,5"
+		ratio="fill"
+
+		label = "\nRobotic feeding behavior template";
+		
+}
